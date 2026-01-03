@@ -22,7 +22,7 @@ class MyHashMap:
              return
           # if it's not founded then go to the next
           cur = cur.next
-      cur.next = ListNode(key, value) # is pointing to new List Node
+      cur.next = ListNode(key, value) # if there is no key, insert to the last position that the pointer is pointing
     
   def get(self, key: int) -> int:
     cur = self.map[self.hash(key)].next # because the first is a dummy node
