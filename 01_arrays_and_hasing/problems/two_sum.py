@@ -15,6 +15,3 @@ class Solution:
                 if nums[j] == val:
                     ans = [i, j]
                     return ans
-                    
-            
-        
