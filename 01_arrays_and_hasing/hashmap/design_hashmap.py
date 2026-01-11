@@ -9,6 +9,7 @@ class MyHashMap:
   def __init__(self):
     self.map = [ListNode() for i in range(1000)] # the first is a dummy node
     # [Dummy] -> [key: 1, val: 10] -> [key: 1001, val: 20] -> None
+    # DummyNode = ListNode(key=-1, val=-1, next=None) //dummy node is real object
   
   def hash(self, key):
     return key % len(self.map) # 1001 -> link to 1, 3560 -> link to 560 (always within the boundary of 999)
@@ -17,7 +18,7 @@ class MyHashMap:
       cur = self.map[self.hash(key)] # start at head of the linked list
       while cur.next: # why cur.next? because we want cur to pointing at the last item when while breaks (to insert to linked list)
           # now we have to find the specific key in that linked list
-          if cur.next.key == key:
+          if cur.next.key == key: # overwrites it
              cur.next.val = value
              return
           # if it's not founded then go to the next

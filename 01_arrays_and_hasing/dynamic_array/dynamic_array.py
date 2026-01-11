@@ -12,6 +12,11 @@ class DynamicArray:
   
   # O(1)
   def insert(self, i: int, n: int) -> None:
+    """
+    not the typical insert method
+    it acts like set()
+    not inserting new element, but overwriting it; so it doesn't need size ++
+    """
     self.arr[i] = n
 
   # O(1) - Average case / Amortized
