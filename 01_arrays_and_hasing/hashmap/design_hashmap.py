@@ -14,7 +14,7 @@ class MyHashMap:
   def hash(self, key):
     return key % len(self.map) # 1001 -> link to 1, 3560 -> link to 560 (always within the boundary of 999)
 
-  def put (self, key: int, value: int) -> None:
+  def put(self, key: int, value: int) -> None:
       cur = self.map[self.hash(key)] # start at head of the linked list
       while cur.next: # why cur.next? because we want cur to pointing at the last item when while breaks (to insert to linked list)
           # now we have to find the specific key in that linked list

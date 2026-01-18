@@ -1,4 +1,4 @@
-# two pointers example
+# two pointers example (ref: https://freedeveloper.tistory.com/393)
 # find all the partial array, that the sum is equal to the given value
 
 n = 5
