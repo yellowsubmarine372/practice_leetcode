@@ -9,6 +9,11 @@ class TreeNode:
 
 class Solution:
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        """
+        different!!!
+        height = 1 + max(left, right)
+        diameter = left + right
+        """
         self.res = 0 # so it is accessible on the dfs()
 
         # return height
